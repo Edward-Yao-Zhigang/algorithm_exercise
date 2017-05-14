@@ -7,3 +7,17 @@ Using the JavaScript language, have the function DivisionStringified(num1,num2) 
 */
 
 
+function DivisionStringified(num1,num2) { 
+  let newArr = [];
+  let result = ("" + Math.round(num1 / num2)).split("");
+  
+  for(let i = result.length-4; i >= 0; i-=3) {
+    console.log(result[i]);
+    result.splice(i+1, 0, ",");
+    
+  }
+  return result.join(""); 
+ 
+}
+
+DivisionStringified(134567891, 23) //"5,850,778"
